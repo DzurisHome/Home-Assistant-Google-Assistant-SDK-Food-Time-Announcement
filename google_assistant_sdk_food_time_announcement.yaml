@@ -1,0 +1,160 @@
+blueprint:
+  name: Google Assistant SDK Food Time Announcement
+  description: 
+    "#### Meal Time Announcement Automtion for Google Speakers when Someone push the Button or some Entity Change State\n
+    ### IMPORTANT for this Automation need Integration Google Assistant SDK\n
+    ## [Github](https://github.com/DzurisHome/Home-Assistant-Google-Speakers-Meal-Time-Announcement)\n
+    ## [LinkTree](https://linktr.ee/DzurisHome)\n
+    ](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2FDzurisHome%2FHome-Assistant-Google-Speakers-Meal-Time-Announcement)"
+  domain: automation
+  author: Dzuriš Home
+  input:
+    trigger_entity:
+      name: Trigger Entity
+      selector:
+        entity:
+          multiple: true
+    trigger_entity_state:
+      name: Trigger Entity State
+      default: "on"
+      selector:
+        text:
+    trigger_second_entity:
+      name: Trigger Second Entity State
+      selector:
+        entity:
+          multiple: true
+    trigger_second_entity_state:
+      name: Trigger Second Entity State
+      default: "arrow_left_click"
+      selector:
+        text:
+
+    trigger_mqtt_topic:
+      name: Trigger MQTT Topic
+      selector:
+        text:
+    trigger_mqtt_payload:
+      name: Trigger MQTT Payload
+      default: "on"
+      selector:
+        text:
+    trigger_second_mqtt_topic:
+      name: Trigger Second MQTT Topic
+      selector:
+        text:
+    trigger_second_mqtt_payload:
+      name: Trigger Second MQTT Payload
+      default: "arrow_left_click"
+      selector:
+        text:
+
+    time_start_breakfast:
+      name: Time Start for Breakfast
+      default: "05:00:00"
+      selector:
+        time: {}
+    time_end_breakfast:
+      name: Time End for Breakfast
+      default: "11:00:00"
+      selector:
+        time: {}
+    time_start_launch:
+      name: Time Start for Launch
+      default: "11:00:00"
+      selector:
+        time: {}
+    time_end_launch:
+      name: Time End for Launch
+      default: "16:00:00"
+      selector:
+        time: {}
+    time_start_dinner:
+      name: Time Start for Dinner
+      default: "16:00:00"
+      selector:
+        time: {}
+    time_end_dinner:
+      name: Time End for Dinner
+      default: "22:00:00"
+      selector:
+        time: {}
+    time_start_meal:
+      name: Time Start for Meal
+      default: "22:00:00"
+      selector:
+        time: {}
+    time_end_meal:
+      name: Time End for Meal
+      default: "05:00:00"
+      selector:
+        time: {}
+    room:
+      name: Select Room or mulitiple Rooms for Announcement
+      description: "If you want add more Rooms write them below"
+      default:
+        "
+        - Bedroom\n
+        - Living Room\n
+        - Master Bedroom"
+      selector:
+        text:
+          multiline: true
+
+
+#AUTOMATION
+mode: single
+trigger:
+  - platform: state
+    entity_id: !input trigger_entity
+    from: ""
+    to: !input trigger_entity_state
+  - platform: state
+    entity_id: !input trigger_second_entity
+    from: ""
+    to: !input trigger_second_entity_state
+
+  - platform: mqtt
+    topic: !input trigger_mqtt_topic
+    payload: !input trigger_mqtt_payload
+  - platform: mqtt
+    topic: !input trigger_second_mqtt_topic
+    payload: !input trigger_second_mqtt_payload
+
+action:
+  - if:
+    - condition: time
+      after: !input time_start_breakfast
+      before: !input time_end_breakfast
+    then:
+    - service: notify.google_assistant_sdk
+      data:
+        message: It's breakfast time
+        target: !input room
+  - if:
+    - condition: time
+      after: !input time_start_breakfast
+      before: !input time_end_breakfast
+    then:
+    - service: notify.google_assistant_sdk
+      data:
+        message: It's launch time
+        target: !input room
+  - if:
+    - condition: time
+      after: !input time_start_breakfast
+      before: !input time_end_breakfast
+    then:
+    - service: notify.google_assistant_sdk
+      data:
+        message: It's dinner time
+        target: !input room
+  - if:
+    - condition: time
+      after: !input time_start_breakfast
+      before: !input time_end_breakfast
+    then:
+    - service: notify.google_assistant_sdk
+      data:
+        message: Meal time
+        target: !input room
