@@ -1,11 +1,13 @@
 ### Home Assistant Google Assistant SDK Food Time Announcement
-#### Food Time Announcement Automtion for Google Chromecasts or Speakers when Someone push the Button or some Entity Change State
+#### Food Time Announcement Automtion for Google Chromecasts Speakers or TVs when Someone push the Button or some Entity Change State
 
 ---
 
-#### Feature the Announcement will not interrupt the Music or TTS
+#### Feature
+* ##### the Announcement will not interrupt the Music or TTS
 
-#### IMPORTANT for this Automation need Integration [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)
+#### IMPORTANT
+* ##### for this Automation need Integration [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)
 
 ---
 
