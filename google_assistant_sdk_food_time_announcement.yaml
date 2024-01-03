@@ -153,7 +153,7 @@ action:
     then:
     - service: notify.google_assistant_sdk
       data:
-        message: It's breakfast time
+        message: "It's breakfast time"
         target: !input room
   - if:
     - condition: time
@@ -162,7 +162,7 @@ action:
     then:
     - service: notify.google_assistant_sdk
       data:
-        message: It's launch time
+        message: "It's launch time"
         target: !input room
   - if:
     - condition: time
@@ -171,7 +171,7 @@ action:
     then:
     - service: notify.google_assistant_sdk
       data:
-        message: It's dinner time
+        message: "It's dinner time"
         target: !input room
   - if:
     - condition: time
@@ -180,5 +180,5 @@ action:
     then:
     - service: notify.google_assistant_sdk
       data:
-        message: Meal time
+        message: "Meal time"
         target: !input room
