@@ -60,7 +60,7 @@ blueprint:
         text:
     trigger_mqtt_payload:
       name: Trigger MQTT Payload
-      default: "on"
+      default: "arrow_left_click"
       selector:
         text:
     trigger_second_mqtt_topic:
