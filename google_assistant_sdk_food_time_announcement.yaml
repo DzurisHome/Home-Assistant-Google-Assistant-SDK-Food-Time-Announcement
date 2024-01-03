@@ -1,22 +1,22 @@
 blueprint:
   name: Google Assistant SDK Food Time Announcement
   description: 
-    "### Home Assistant Google Assistant SDK Food Time Announcement\n
-    "#### Food Time Announcement Automtion for Google Speakers and Displays when Someone push the Button or some Entity Change State\n
+    ### Home Assistant Google Assistant SDK Food Time Announcement\n
+    #### Food Time Announcement Automtion for Google Speakers and Displays when Someone push the Button or some Entity Change State\n
 
-    "### Feature\n
-    "* #### the Announcement will not interrupt the Music or TTS\n
+    ### Feature\n
+    * #### the Announcement will not interrupt the Music or TTS\n
 
-    "> [!IMPORTANT]\n
-    "> ### for this Automation need Integrations\n
-    "> * [Google Cast](https://www.home-assistant.io/integrations/cast)\n
-    "> * [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)\n
+    > [!IMPORTANT]\n
+    > ### for this Automation need Integrations\n
+    > * [Google Cast](https://www.home-assistant.io/integrations/cast)\n
+    > * [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)\n
 
-    "## [Github](https://github.com/DzurisHome/Home-Assistant-Google-Speakers-Meal-Time-Announcement)\n
+    ## [Github](https://github.com/DzurisHome/Home-Assistant-Google-Speakers-Meal-Time-Announcement)\n
 
-    "### [LinkTree](https://linktr.ee/DzurisHome)\n
+    ### [LinkTree](https://linktr.ee/DzurisHome)\n
     
-    "[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/DzurisHome)\n
+    [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/DzurisHome)\n
   domain: automation
   author: Dzuriš Home
   input:
