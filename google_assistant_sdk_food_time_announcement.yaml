@@ -1,7 +1,7 @@
 blueprint:
   name: Google Assistant SDK Food Time Announcement
   description: >
-    #### Food Time Announcement Automtion for Google Speakers and Displays when Someone push the Button or some Entity Change State
+    ### Food Time Announcement Automtion for Google Speakers and Displays when Someone push the Button or some Entity Change State
 
     ---
 
@@ -11,17 +11,21 @@ blueprint:
 
     ---
 
-    > [!IMPORTANT]
+    ### for this Automation need Integrations
 
-    > ### for this Automation need Integrations
+    * [Google Cast](https://www.home-assistant.io/integrations/cast)
 
-    > * [Google Cast](https://www.home-assistant.io/integrations/cast)
-
-    > * [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)
+    * [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)
 
     ---
 
-    ## [Github](https://github.com/DzurisHome/Home-Assistant-Google-Assistant-SDK-Food-Time-Announcement)
+    <a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=google_cast" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
+
+    <a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=google_assistant_sdk" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
+
+    ---
+
+    ### [Google Assistant SDK Food Time Announcement | Github](https://github.com/DzurisHome/Home-Assistant-Google-Assistant-SDK-Food-Time-Announcement)
 
     ### [LinkTree](https://linktr.ee/DzurisHome)
     
