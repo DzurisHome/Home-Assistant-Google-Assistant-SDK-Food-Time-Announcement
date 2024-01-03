@@ -11,7 +11,7 @@ blueprint:
 
     ---
 
-    > [!IMPORTANT]\n
+    > [!IMPORTANT]
     > ### for this Automation need Integrations
     > * [Google Cast](https://www.home-assistant.io/integrations/cast)
     > * [Google Assistant SDK](https://www.home-assistant.io/integrations/google_assistant_sdk)
